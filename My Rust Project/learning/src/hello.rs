@@ -177,7 +177,7 @@ struct Number{
     odd:bool,
     value:i32,
 }
-fn mmain(){
+fn main(){
     let one = Number{ odd: true, value: 1};
     let two = Number{ odd: false , value:2};
     print_number(one);
@@ -248,9 +248,3 @@ fn main(){
     }
     n.value = 19; // all good
 }
-
-// traits are somtehing multiple types can have in common:
-trait Signed{
-    fn is_strictly_positive(self)->bool;
-}
-

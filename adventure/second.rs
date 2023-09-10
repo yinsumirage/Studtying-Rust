@@ -44,4 +44,23 @@ fn main(){
         }
     };
     println!("from loop {:?}",v);
+
+    // if match 函数或作用域块中的最后一条语句是不带;的表达式
+    // rust将把它作为一个值从块中返回
+    let v = {
+        let a = 1;
+        let b = 2;
+        a+b
+    };
+    println!("{}",v);
+    let x=40;
+    let v=if x>40{-1} else {1};
+    println!("from if :{}",v);
+    let food = "hamburger";
+    let result = match food{
+        "hamburger"=>"is a hamburger",
+        _=>"is not a hamburger",
+    };
+    println!("from match :{}",result);
+    
 }
